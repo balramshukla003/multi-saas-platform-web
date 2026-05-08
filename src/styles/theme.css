@@ -1,0 +1,111 @@
+/* src/styles/theme.css */
+/* Tailwind CSS v4.4.1 Centralized Theme System */
+
+@theme {
+    /* ========================================================================
+     COLORS
+  ========================================================================= */
+
+    /* NAVY */
+    --color-navy: #1b3a5c;
+    --color-navy-dark: #0f2440;
+    --color-navy-light: #2c527f;
+    --color-navy-lighter: #4a72a0;
+
+    /* STEEL (replaces burgundy — deep slate-blue secondary) */
+    --color-steel: #1e3d5a;
+    --color-steel-dark: #122638;
+    --color-steel-light: #2e5470;
+
+    /* OFFWHITE */
+    --color-offwhite: #f3f6fa;
+
+    /* BEIGE → cool ivory/mist */
+    --color-beige: #dde4ed;
+    --color-beige-dark: #c8d3e0;
+    --color-beige-light: #edf1f7;
+
+    /* TEXT */
+    --color-charcoal: #1a1f2b;
+    --color-muted: #7a8da3;
+
+    /* ========================================================================
+     FONTS
+  ========================================================================= */
+
+    --font-sans: "DM Sans", system-ui, sans-serif;
+    --font-display: "Playfair Display", Georgia, serif;
+
+    /* ========================================================================
+     SHADOWS
+  ========================================================================= */
+
+    --shadow-card:
+        0 2px 8px rgba(27, 58, 92, 0.08),
+        0 1px 3px rgba(0, 0, 0, 0.06);
+
+    --shadow-card-hover:
+        0 8px 24px rgba(27, 58, 92, 0.14);
+
+    --shadow-navy:
+        0 4px 14px rgba(27, 58, 92, 0.32);
+
+    /* ========================================================================
+     BORDER RADIUS
+  ========================================================================= */
+
+    --radius-xl: 12px;
+    --radius-2xl: 16px;
+    --radius-3xl: 20px;
+
+    /* ========================================================================
+     ANIMATIONS
+  ========================================================================= */
+
+    --animate-fade-in: fadeIn 0.3s ease;
+    --animate-slide-up: slideUp 0.3s ease;
+    --animate-pulse-slow: pulse 3s infinite;
+
+    /* ========================================================================
+     CUSTOM BACKGROUNDS
+  ========================================================================= */
+
+    --background-image-primary-gradient:
+        linear-gradient(135deg,
+            #0f2440 0%,
+            #1b3a5c 45%,
+            #1e3d5a 100%);
+
+    --background-image-soft-gradient:
+        linear-gradient(180deg,
+            rgba(243, 246, 250, 0.04),
+            rgba(243, 246, 250, 0.02));
+
+    /* ========================================================================
+     KEYFRAMES
+  ========================================================================= */
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(8px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes slideUp {
+        from {
+            opacity: 0;
+            transform: translateY(16px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+}

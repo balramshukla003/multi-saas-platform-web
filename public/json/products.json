@@ -1,0 +1,30 @@
+{
+    "products": [
+        {
+            "name": "CRM",
+            "key": "crm",
+            "modules": [
+                "leads",
+                "customers",
+                "followups"
+            ]
+        },
+        {
+            "name": "Inventory",
+            "key": "inventory",
+            "modules": [
+                "items",
+                "stock-entry",
+                "warehouse"
+            ]
+        },
+        {
+            "name": "Laundry",
+            "key": "laundry",
+            "modules": [
+                "orders",
+                "delivery"
+            ]
+        }
+    ]
+}

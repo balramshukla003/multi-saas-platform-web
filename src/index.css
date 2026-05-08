@@ -1,0 +1,20 @@
+/* src/index.css */
+
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap");
+
+@import "tailwindcss";
+@import "./styles/theme.css";
+
+html,
+body,
+#root {
+    width: 100%;
+    min-height: 100%;
+}
+
+body {
+    margin: 0;
+    overflow-x: hidden;
+    font-family: var(--font-sans);
+    background: var(--background-image-primary-gradient);
+}
