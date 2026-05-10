@@ -1,13 +1,19 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { loginUser } from "../../services/api-services/getData.js";
 import { useAuth } from "../../context/auth/AuthProvider.jsx";
 import useNavigateUser from "../../hooks/NavigateUser.jsx";
 
 
 const LoginPage = () => {
-
     const { user, isLoggedIn, removeUserdata, setUserData } = useAuth();
     const navigateLoggedInUser = useNavigateUser();
+
+    useEffect(() => {
+        if (isLoggedIn) {
+            navigateLoggedInUser(user);
+        }
+    }, [isLoggedIn, user]);
+
     const [formData, setFormData] = useState({
         username: "",
         password: "",
@@ -33,7 +39,7 @@ const LoginPage = () => {
                 setUserData(response); console.log("Login Success:", response);
                 navigateLoggedInUser(response);
             }
-            
+
         } catch (err) {
             console.error(err);
             setError("Invalid username or password");
