@@ -7,5 +7,4 @@ const CommonDashboard = () => {
         </div>
     )
 }
-
 export default CommonDashboard

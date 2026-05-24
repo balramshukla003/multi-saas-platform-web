@@ -3,7 +3,7 @@ import { Navigate, Outlet } from "react-router-dom";
 import { useAuth } from "../context/auth/AuthProvider";
 
 const ProtectedRoute = ({ module }) => {
-    console.log(object)
+    console.log(module)
     const { user, isLoggedIn } = useAuth();
     console.log(user)
 

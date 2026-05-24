@@ -13,7 +13,7 @@ const LoginPage = () => {
             navigateLoggedInUser(user);
             return;
         }
-    }, [isLoggedIn, user]);
+    }, []);
 
     const [formData, setFormData] = useState({
         username: "",
