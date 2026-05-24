@@ -1,31 +1,28 @@
 import { useNavigate } from "react-router-dom";
+import { useAuth } from "../context/auth/AuthProvider";
 const useNavigateUser = () => {
+    const { user, isLoggedIn } = useAuth();
     const navigate = useNavigate();
+
     const navigateLoggedInUser = (data) => {
         console.log("object, data", data)
         if (!data?.user?.products) return;
-        const product = data.user.products.length;
-        if (data.user.products.length === 0) {
-            navigate("/no-products");
-            return;
-        }
+        switch (data.user.products[0]?.moduleName) {
+            case "laundry":
+                navigate("/laundry/dashboard");
+                break;
 
-        if (product > 1) {
-            navigate("/common-dashboard");
-        } else {
-            switch (data.user.products[0]) {
-                case "laundry":
-                    navigate("/laundry/dashboard");
-                    break;
+            case "crm":
+                navigate("/crm/dashboard");
+                break;
 
-                case "crm":
-                    navigate("/crm/dashboard");
-                    break;
+            case "inventory":
+                navigate("/inventory/dashboard");
+                break;
 
-                default:
-                    navigate("/");
-                    break;
-            }
+            default:
+                navigate("/no-products");
+                break;
         }
     };
     return navigateLoggedInUser;

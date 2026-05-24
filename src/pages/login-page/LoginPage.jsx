@@ -11,6 +11,7 @@ const LoginPage = () => {
     useEffect(() => {
         if (isLoggedIn) {
             navigateLoggedInUser(user);
+            return;
         }
     }, [isLoggedIn, user]);
 

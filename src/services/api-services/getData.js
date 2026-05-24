@@ -9,7 +9,10 @@ export async function loginUser(data = {}) {
                     id: 1,
                     name: "Admin User",
                     username: "admin",
-                    products: ["laundry", "crm"],
+                    products: [
+                        { moduleName: "laundry", subModule: [] },
+                        { moduleName: 'crm', subModule: [] }
+                    ],
                 },
                 message: "Login successful",
             };
